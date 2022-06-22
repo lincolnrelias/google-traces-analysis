@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# event folders
+collection_events/
+instance_events/
+
 # C extensions
 *.so
 
