@@ -1,0 +1,9 @@
+Tempo minimo de submissao de task(ms): 600338967
+Tempo maximo de submissao de task(ms): 604799794604
+Tempo minimo de submissao de jobs(ms): 600688761
+Tempo maximo de submissao de jobs(ms): 604789630639
+Jobs submetidas por hora: 1168.8323353293413
+Tasks submetidas por hora: 22509.335329341317
+Tempo de execucao(s): 88.22804975509644
+Tempo de carregamento variaveis do plot: 55.31848621368408
+Tempo dos fors: 26.01620841026306
