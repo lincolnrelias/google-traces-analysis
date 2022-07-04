@@ -1,10 +1,7 @@
 #precisa ser feito antes to import do pyspark
-from cProfile import label
-from re import A
 import findspark
 findspark.init()
 #-------------------------------------------#
-import pyspark
 import matplotlib.pyplot as plt
 from pyspark.sql.functions import col
 import sys, os, math, time
@@ -81,8 +78,8 @@ rddMinJobTimeByCID = rddCE.groupBy("collection_id")\
 
 #percorre os instance_events, coletando métricas utilizadas nas análises
 for filename in os.listdir("instance_events"):
-  
-  if filesCounter==50:
+  #contador para testes
+  if filesCounter==4:
     break
   f = os.path.join("instance_events",filename)
   rddIE = spark.read.option("header","true").schema(instance_events_schema).csv(f)
@@ -178,15 +175,15 @@ plt.title('Requisição de cpus ao longo do tempo')
 plt.savefig('consumocpus.png',dpi=200)
 plt.clf()
 plt.figure(figsize = (10, 6), dpi = 100)
-sns.barplot(x=[j[0] for j in resPerCategory],y=[j[1] for j in resPerCategory])
-plt.savefig("usoCpuPorCat.png").set(title="Requisição de cpus por categoria de Task")
+sns.barplot(x=[j[0] for j in resPerCategory],y=[j[1] for j in resPerCategory]).set_title("Requisição de cpus por categoria de Task")
+plt.savefig("usoCpuPorCat.png")
 plt.clf()
 plt.figure(figsize = (10, 6), dpi = 100)
-sns.barplot(x=[j[0] for j in resPerCategory],y=[j[2] for j in resPerCategory])
-plt.savefig("usoMemPorCat.png").set(title="Requisição de memória por categoria de Task")
+sns.barplot(x=[j[0] for j in resPerCategory],y=[j[2] for j in resPerCategory]).set_title("Utilização de memória por categoria de Task")
+plt.savefig("usoMemPorCat.png")
 plt.clf()
 plt.figure(figsize = (10, 6), dpi = 100)
-sns.regplot(x=y_sum_cpus,y=y_sum_memory).set(title="Relação entre requisições de cpus e memória")
+sns.regplot(x=y_sum_cpus,y=y_sum_memory).set_title("Relação entre requisições de cpus e memória")
 plt.savefig("relacaoMemoriaCpus.png")
 
 outputFile = open("métricas.txt",'w')

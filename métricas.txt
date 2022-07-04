@@ -1,18 +1,18 @@
 Requisicao de recursos por categoria:
 Categoria           Requisicao media de cpus    Requisicao media de memoria
 ----------------  --------------------------  -----------------------------
-Best-Efort-Batch                  0.0178341                      0.0121858
-Mid-Tier                          0.00712253                     0.00347823
-Monitoring-tier                   0.00881741                     0.00167595
-Production-tier                   0.0143949                      0.00595341
-Free-tier                         0.00946009                     0.00927193
+Best-Efort-Batch                  0.0178806                      0.0123221
+Mid-Tier                          0.00704027                     0.00345586
+Monitoring-tier                   0.0081711                      0.00156845
+Production-tier                   0.0144933                      0.00561369
+Free-tier                         0.00946543                     0.00930423
 
 Jobs submetidas por hora, em media: 1008.7005988023952
-Tasks submetidas por hora, em media: 443043.4730538922
-Tempo medio delay de inicio entre jobs e tasks:(ms) 326715.9676690674
-Coeficiente de correlacao entre requisicao de memoria e cpu: 0.5911629882324999
-Tempo de execucao(s): 1351.4705877304077
+Tasks submetidas por hora, em media: 33863.467065868266
+Tempo medio delay de inicio entre jobs e tasks:(ms) 295877.8642858276
+Coeficiente de correlacao entre requisicao de memoria e cpu: 0.5864077311330504
+Tempo de execucao(s): 117.05398201942444
 
-Tempo de carregamento variaveis do plot: 546.1539239883423
-Tempo de preenchimento por categoria: 308.6813495159149
-Tempo dos fors: 251.082417011261
+Tempo de carregamento variaveis do plot: 45.2628378868103
+Tempo de preenchimento por categoria: 43.70343518257141
+Tempo dos fors: 8.002782583236694
